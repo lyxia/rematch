@@ -55,7 +55,7 @@ const effectsPlugin: R.Plugin = {
 			if (action.type in this.effects) {
 				const promise = this.effects[action.type](
 					action.payload,
-					store.getState(),
+					store.getState,
 					action.meta
 				)
 				await next(action)

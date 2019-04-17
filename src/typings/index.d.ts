@@ -125,7 +125,7 @@ export type ModelReducers<S = any> = {
   [key: string]: (state: S, payload: any, meta?: any) => S,
 }
 
-type ModelEffects<S> = {
+export type ModelEffects<S> = {
   [key: string]: (
     this: { [key: string]: (payload?: any, meta?: any) => Action<any, any> },
     payload: any,
